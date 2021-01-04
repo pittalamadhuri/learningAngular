@@ -1,0 +1,5 @@
+<p>Parent</p>
+<p>name {{name}}</p>
+<input type="text" [(ngModel)]="name"/>
+<button [disabled]="name?.length === 0" (click)="onClick()">Login</button>
+<app-listener [inputName]= "name" (clickCall)="onClickChild($event)"></app-listener>
